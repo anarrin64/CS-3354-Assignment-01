@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 /**
  *  Grocery Management System using parallel Arrays.
  * This class handles inventory display and restocking
@@ -13,6 +16,44 @@ public class GrocerySystem {
         String[] itemNames = new String[10];
         double[] itemPrices = new double[10];
         int [] itemStocks = new int[10];
+
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("\n===== Grocery Menu =====");
+            System.out.println("1. View Inventory");
+            System.out.println("2. Restock Item");
+            System.out.println("3. Exit");
+            System.out.print("Enter your choice: ");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+
+            if (choice == 1) {
+
+                printInventory(itemNames, itemPrices, itemStocks);
+
+            } else if (choice == 2) {
+
+                System.out.print("Enter item name to restock: ");
+                String target = scanner.nextLine();
+
+                System.out.print("Enter amount to add: ");
+                int amount = scanner.nextInt();
+
+                restockItem(itemNames, itemStocks, target, amount);
+
+            } else if (choice == 3) {
+
+                System.out.println("Exiting program...");
+                break;
+
+            } else {
+                System.out.println("Invalid choice. Try again.");
+            }
+        }
+
+        scanner.close();
     }
 
     /**
