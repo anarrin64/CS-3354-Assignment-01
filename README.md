@@ -7,6 +7,6 @@ Contributed Sections:
 
 Task 1: Parallel Array Architecture - Anika Chalak
 
-Task 2: Inventory Display - 
+Task 2: Restock & Search - Oscar Rodriguez Loredo 
 
-Task 3: Restock & Search -
+Task 3: Inventory Display - Bibek Acharya

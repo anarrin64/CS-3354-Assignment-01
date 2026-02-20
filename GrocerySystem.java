@@ -69,4 +69,21 @@ public class GrocerySystem {
             }
         }
     }
+
+     /*
+      * Restocks a target item
+      * @param names The array of item names
+      * @param stocks The array of item stocks
+      * @param target The name of the target item
+      * @param amount The amount to add to the stock
+      */
+     public static void restockItem(String[] names, int[] stocks, String target, int amount){
+		for (int i = 0; i < names.length; i++) {
+			if (names[i] == target){
+				stocks[i] = amount;
+				return
+			}
+		}
+		System.out.printLn("Item not found.");
+     }
 }
